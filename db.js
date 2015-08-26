@@ -10,13 +10,6 @@ var UserSchema = mongoose.Schema({
     password: String,
 });
 
-var ProjectSchema = mongoose.Schema({
-    id: String,
-    name: String,
-    appVersion: String,
-    apiKey: String
-});
-
 var ErrorSchema = mongoose.Schema({
     errorMessage: String,
     className: String,
@@ -31,8 +24,15 @@ var ErrorSchema = mongoose.Schema({
     tag: [ String ]
 });
 
+var ProjectSchema = mongoose.Schema({
+    id: String,
+    name: String,
+    appVersion: String,
+    apiKey: String,
+    error: [ErrorSchema]
+});
+
 db.model('User', UserSchema, 'users');
 db.model('Project', ProjectSchema, 'projects');
-db.model('Error', ErrorSchema, 'errors');
 
 module.exports = db;
