@@ -20,8 +20,7 @@ var ErrorSchema = mongoose.Schema({
     osVersion: String,
     osArch: String,
     appMemTotal: String,
-    appMemFree: String,
-    tag: [ String ]
+    appMemFree: String
 });
 
 var ProjectSchema = mongoose.Schema({
@@ -29,7 +28,7 @@ var ProjectSchema = mongoose.Schema({
     name: String,
     appVersion: String,
     apiKey: String,
-    error: [ErrorSchema]
+    error: [ ErrorSchema ]
 });
 
 db.model('User', UserSchema, 'users');
