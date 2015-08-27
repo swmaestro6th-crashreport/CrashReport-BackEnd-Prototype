@@ -21,7 +21,7 @@ var ErrorSchema = mongoose.Schema({
     osArch: String,
     appMemTotal: String,
     appMemFree: String,
-    createdAt: new Date()
+    createdAt: Date
 });
 
 var ProjectSchema = mongoose.Schema({

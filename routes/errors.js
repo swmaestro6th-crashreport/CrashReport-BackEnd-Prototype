@@ -16,7 +16,8 @@ router.post('/:project_id', function (req, res) {
             osVersion: req.body.osversion,
             osArch: req.body.osarch,
             appMemTotal: req.body.memtotal,
-            appMemFree: req.body.memfree
+            appMemFree: req.body.memfree,
+	    createdAt: new Date()
         });
         projects.save(function (err) {
             if (err) res.json({ code: 100, message: "unknown error" });
