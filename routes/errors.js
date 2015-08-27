@@ -27,9 +27,9 @@ router.post('/:project_id', function (req, res) {
 
 router.get('/project_id', function (req, res) {
     if (!req.params.project_id) res.json({ code : 101, message : "failed" });
-    Project.fiindById(req.params.project_id, function (err, projects) {
+    Project.findById(req.params.project_id, function (err, projects) {
         if (err) res.json({ code : 100, message : "unknown error"  });
-        res.json({ code : 200, projects : projects.error });
+        res.json({ code : 200, errors : projects.error });
     });
 
 });

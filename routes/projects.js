@@ -18,4 +18,10 @@ router.post('/', function(req, res) {
     }
 });
 
+router.get('/project_id', function (req, res) {
+    Project.findById(req.params.project_id, function(err, projects) {
+        res.json({ code: 200, projects: projects });
+    })
+});
+
 module.exports = router;

@@ -2,11 +2,6 @@ var express = require('express'),
     User = db.model('User'),
     router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res) {
-  res.send('respond with a resource');
-});
-
 router.post('/', function (req, res) {
     if (!req.body.email || !req.body.password) res.json({ code : 101, message : "failed" });
 
