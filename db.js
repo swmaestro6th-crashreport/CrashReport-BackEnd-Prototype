@@ -24,7 +24,7 @@ var ErrorSchema = mongoose.Schema({
 });
 
 var ProjectSchema = mongoose.Schema({
-    id: String,
+    userId: String,
     name: String,
     appVersion: String,
     apiKey: String,
