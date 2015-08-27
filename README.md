@@ -31,6 +31,9 @@ CrashReport for nodejs Prototype
 "GET" /projects/:project_id => 프로젝트 가져오기
   req.params.project_id = 프로젝트 id
   
+"GET" /projects/:user_id => 사용자의 프로젝트 리스트의 id 가져오기
+  req.params.user_id = 사용자 id
+  
 ### Error API
 
 "GET" /errors/:project_id = > 수집된 에러 가져오기
