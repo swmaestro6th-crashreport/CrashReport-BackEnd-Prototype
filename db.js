@@ -20,7 +20,7 @@ var ErrorSchema = mongoose.Schema({
     osVersion: String,
     osArch: String,
     appMemTotal: String,
-    appMemFree: String
+    appMemFree: String,
     createdAt: new Date()
 });
 
